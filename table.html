@@ -1,0 +1,26 @@
+<Doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel=""stylesheet" href="/static/styles.css/styles.css" />
+
+</head>
+<body>
+    <table class="table">
+        <tr class="table_ _header">
+            {% for header in headings %}
+            <th class="table_ _cell">{{ header}}</th>
+            {% endfor %}
+        </tr>
+        {% for row in data %}
+        <tr class="table_ _row">
+          {% for cell in row %}
+          <td class="table_ _cell">{{ cell }}</td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
